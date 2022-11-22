@@ -1,0 +1,21 @@
+# CUDA
+cuda_devices: '0'   # multi-gpu training is available
+
+# Network
+network:
+  generator:
+    k: 8
+    feat_dim: 128
+    res_conv_dim: 128
+  discriminator: # discriminator is not used in test/evaluation
+    k: 8
+    feat_dim: 64
+    res_conv_dim: 64
+
+# Test dataset
+dataset:
+  input_dir: 'C:\Users\admin\Desktop\100only\PointCloudSuperResolution.pytorch\PointCloudSuperResolution.pytorch\data\input'
+  gt_dir: 'C:\Users\admin\Desktop\100only\PointCloudSuperResolution.pytorch\PointCloudSuperResolution.pytorch\data\GT'
+  pred_dir: 'C:\Users\admin\Desktop\100only\PointCloudSuperResolution.pytorch\PointCloudSuperResolution.pytorch\data\pre'
+
+load_model: 'C:\Users\admin\Desktop\100only\PointCloudSuperResolution.pytorch\PointCloudSuperResolution.pytorch\ckpt\AR_GCN\result_120_8.008481.pt'
